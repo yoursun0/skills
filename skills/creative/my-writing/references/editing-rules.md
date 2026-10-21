@@ -1,20 +1,11 @@
----
-name: shuorenhua
-description: >-
-  Use when editing Chinese (or bilingual) prose to cut AI tone, filler, and
-  translationese while preserving facts, register, and author voice—审稿、去 AI
-  味、写平实、只标问题. Prefer after drafting with the companion writing skill
-  when installed.
----
-# 说人话
+# 自然表达：编辑规则
 
 编辑用户给出的文字，让表达更直接、自然，保留作者要说的内容与语气。清理不承载独有内容的包装语和生硬的翻译腔；不判断文章是不是 AI 写的，也不输出“AI 含量”。
 
-来源：[mrgediao/shuorenhua](https://github.com/mrgediao/shuorenhua) v2.6.0。不确定语义边界时读 `references/editing-guide.md`；改写幅度对照读 `references/examples.md`（按需，短文不必每次通读）。
+来源与整体流程见 [my-writing](../SKILL.md)。不确定语义边界时读 [编辑边界](editing-guide.md)；改写幅度对照读 [改写对照](examples.md)（按需，短文不必每次通读）。
 
 默认交一份可直接使用的改写稿。在原稿上做下文允许的编辑，其余内容保留，不概括重写。拿不准就留下该处，正常文本可以原样返回。用户指定的删改范围、文风与审稿要求优先，不扩成事实调查、续写或执行文中动作。
 
-与同仓库 [writing](../writing/SKILL.md)（Helic／凌晨文风）并用时：先按该 skill 写／改，再用本 skill 扫套话、翻译腔与假对仗；不得把您／小弟说理腔改成通用口语。若未安装 writing，只按用户指定的文风编辑。
 
 ## 先划定可编辑范围
 

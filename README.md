@@ -13,8 +13,7 @@ Install the skills you need, adapt them to your projects, and contribute improve
 | [blender-render](skills/creative/blender-render/SKILL.md) | Building a Blender model from reference photos and delivering a `.blend` file plus ten named PNG camera angles. | Blender 5.2 with its bundled Python runtime; reference images. Cycles uses an OptiX GPU when available, with CPU fallback. |
 | [hyperframe-video](skills/creative/hyperframe-video/SKILL.md) | Producing or substantially revising a complete HyperFrames video, from reference study and storyboarding through rendering and delivery verification. | A working HyperFrames environment; supporting skills and fallback guidance are listed in the workflow. |
 | [siliconflow-media](skills/creative/siliconflow-media/SKILL.md) | Generating images, video clips, and speech through SiliconFlow with a bundled Python runner. | Python 3.11+, `uv`, and a SiliconFlow API key for live generation. Optional encrypted credential storage requires Windows PowerShell. |
-| [writing](skills/creative/writing/SKILL.md) | Writing 散文、小說、詩詞 and 週記 in Helic Leung's 凌晨 voice, with separate genre and era guidance. | Bundled style references; provide project-specific source material when continuing an existing work. |
-| [shuorenhua](skills/creative/shuorenhua/SKILL.md) | Editing Chinese (or bilingual) prose to cut AI tone, filler, and translationese while preserving facts and author voice. | Bundled editing guide and examples. Adapted from [mrgediao/shuorenhua](https://github.com/mrgediao/shuorenhua). Pairs with `writing` when both are installed. |
+| [my-writing](skills/creative/my-writing/SKILL.md) | Writing 散文、小說、詩詞 and 週記 in Helic Leung's 凌晨 voice, and editing Chinese or bilingual prose for natural expression while preserving meaning and author voice. | Bundled genre references, editing rules, and examples; provide source material when continuing an existing work. Editing guidance adapts [mrgediao/shuorenhua](https://github.com/mrgediao/shuorenhua). |
 
 
 ### Engineering
@@ -61,10 +60,9 @@ Read the skill before running it. Live media generation requires your own provid
     │   ├── blender-render/
     │   ├── hyperframe-video/
     │   ├── siliconflow-media/
-    │   ├── shuorenhua/
-    │   │   ├── SKILL.md
-    │   │   └── references/
-    │   └── writing/
+    │   └── my-writing/
+    │       ├── SKILL.md
+    │       └── references/
     └── engineering/
         └── ship-then-uat/
             └── SKILL.md
@@ -85,7 +83,7 @@ Agents editing this repository should follow [AGENTS.md](AGENTS.md).
 
 ## Acknowledgments
 
-The collection and folder organization are inspired by [Matt Pocock's skills](https://github.com/mattpocock/skills) and [Anthropic's skills](https://github.com/anthropics/skills). `shuorenhua` adapts [mrgediao/shuorenhua](https://github.com/mrgediao/shuorenhua); keep upstream attribution when forking further.
+The collection and folder organization are inspired by [Matt Pocock's skills](https://github.com/mattpocock/skills) and [Anthropic's skills](https://github.com/anthropics/skills). The editing guidance in `my-writing` adapts [mrgediao/shuorenhua](https://github.com/mrgediao/shuorenhua); keep upstream attribution when forking further.
 
 ## License
 
