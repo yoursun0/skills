@@ -1,0 +1,6 @@
+interface:
+  display_name: "SiliconFlow Media"
+  short_description: "Generate images, video clips, and speech locally"
+  default_prompt: "Use $siliconflow-media to generate a media asset for this project."
+policy:
+  allow_implicit_invocation: true
