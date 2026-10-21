@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender Render"
+  short_description: "Photos in, Blender model and ten angle renders"
+  default_prompt: "Use $blender-render to build a Blender model from these reference images and render ten camera angles."
