@@ -1,6 +1,6 @@
 # Agent Skills
 
-Six reusable workflows for AI agents by [Helic Leung](https://github.com/yoursun0), organized into Creative, Engineering, Sensor, and Text. Each skill bundles its instructions, references, and runtime scripts so it can be installed into another project.
+Seven reusable workflows for AI agents by [Helic Leung](https://github.com/yoursun0), organized into Creative, Engineering, Sensor, and Text. Each skill bundles its instructions, references, and runtime scripts so it can be installed into another project.
 
 ## Skill catalog
 
@@ -12,6 +12,7 @@ Choose Creative to produce visual media, Engineering to verify a deployment, Sen
 | --- | --- | --- |
 | [blender-render](skills/creative/blender-render/SKILL.md) | Builds a Blender model from reference photos and delivers a `.blend` file plus ten PNG camera angles. | Blender 5.2 and reference images; OptiX GPU rendering when available, CPU fallback otherwise. |
 | [hyperframe-video](skills/creative/hyperframe-video/SKILL.md) | Produces complete HyperFrames videos through reference study, storyboarding, animation, rendering, and delivery review. | A working HyperFrames environment; the skill documents supporting workflows and fallbacks. |
+| [game-gui-aesthetics](skills/creative/game-gui-aesthetics/SKILL.md) | Designs and reviews game HUD/menu/shop/results chrome and mock-to-live visual handoffs for dark-rogue or card-game UIs. | None beyond an agent that can read `SKILL.md`; optional deepen links are listed in the skill. |
 | [siliconflow-media](skills/creative/siliconflow-media/SKILL.md) | Generates images, video clips, and speech through SiliconFlow. | Python 3.11+, uv, and a SiliconFlow API key. Optional encrypted credential storage uses Windows PowerShell. |
 
 ### Engineering
@@ -65,6 +66,7 @@ Ask your agent to use the installed skill by name and supply the source material
 | --- | --- |
 | Model a subject | Use blender-render to model this building from the attached reference photos and render ten angles. |
 | Produce a video | Use hyperframe-video to create a 30-second product explainer from this brief. |
+| Design game GUI chrome | Use game-gui-aesthetics before drawing HUD plaques or handing mocks to an implementer. |
 | Generate media | Use siliconflow-media to generate an illustration from this prompt. |
 | Verify a release | Use ship-then-uat to deploy this change and test these acceptance criteria against the deployed commit. |
 | Understand a video | Use watch to summarize this video and cite the key timestamps. |
@@ -76,6 +78,7 @@ Ask your agent to use the installed skill by name and supply the source material
 skills/
 ├── creative/
 │   ├── blender-render/
+│   ├── game-gui-aesthetics/
 │   ├── hyperframe-video/
 │   └── siliconflow-media/
 ├── engineering/
