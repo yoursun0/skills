@@ -14,6 +14,14 @@ Install the skills you need, adapt them to your projects, and contribute improve
 | [hyperframe-video](skills/creative/hyperframe-video/SKILL.md) | Producing or substantially revising a complete HyperFrames video, from reference study and storyboarding through rendering and delivery verification. | A working HyperFrames environment; supporting skills and fallback guidance are listed in the workflow. |
 | [siliconflow-media](skills/creative/siliconflow-media/SKILL.md) | Generating images, video clips, and speech through SiliconFlow with a bundled Python runner. | Python 3.11+, `uv`, and a SiliconFlow API key for live generation. Optional encrypted credential storage requires Windows PowerShell. |
 | [writing](skills/creative/writing/SKILL.md) | Writing 散文、小說、詩詞 and 週記 in Helic Leung's 凌晨 voice, with separate genre and era guidance. | Bundled style references; provide project-specific source material when continuing an existing work. |
+| [shuorenhua](skills/creative/shuorenhua/SKILL.md) | Editing Chinese (or bilingual) prose to cut AI tone, filler, and translationese while preserving facts and author voice. | Bundled editing guide and examples. Adapted from [mrgediao/shuorenhua](https://github.com/mrgediao/shuorenhua). Pairs with `writing` when both are installed. |
+
+
+### Engineering
+
+| Skill | Use it for | Requirements |
+| --- | --- | --- |
+| [ship-then-uat](skills/engineering/ship-then-uat/SKILL.md) | Shipping a change then running acceptance tests against the live host for that commit, not a stale deploy. | A live URL and a way to confirm which commit is deployed; works solo or with split deploy / UAT ownership. |
 
 ## Installation
 
@@ -31,7 +39,7 @@ bunx skills@latest add yoursun0/skills --skill siliconflow-media
 
 Add `--global` to install at user scope instead of in the current project. Installation provides the skill files; follow the selected skill's prerequisites to set up its tools and credentials.
 
-For manual installation, copy an individual skill directory from `skills/creative/` into your agent's skill directory. Include its complete contents so relative references and bundled scripts work. Consult your agent's documentation for the destination and invocation syntax.
+For manual installation, copy an individual skill directory from `skills/<category>/` into your agent's skill directory. Include its complete contents so relative references and bundled scripts work. Consult your agent's documentation for the destination and invocation syntax.
 
 After installation, ask your agent to use the skill by name, for example:
 
@@ -49,23 +57,17 @@ Read the skill before running it. Live media generation requires your own provid
 ├── AGENTS.md
 ├── LICENSE
 └── skills/
-    └── creative/
-        ├── blender-render/
-        │   ├── SKILL.md
-        │   ├── agents/
-        │   ├── references/
-        │   └── scripts/
-        ├── hyperframe-video/
-        │   ├── SKILL.md
-        │   └── references/
-        ├── siliconflow-media/
-        │   ├── SKILL.md
-        │   ├── agents/
-        │   ├── references/
-        │   └── scripts/
-        └── writing/
-            ├── SKILL.md
-            └── references/
+    ├── creative/
+    │   ├── blender-render/
+    │   ├── hyperframe-video/
+    │   ├── siliconflow-media/
+    │   ├── shuorenhua/
+    │   │   ├── SKILL.md
+    │   │   └── references/
+    │   └── writing/
+    └── engineering/
+        └── ship-then-uat/
+            └── SKILL.md
 ```
 
 Each skill lives in `skills/<category>/<skill-name>/`. `SKILL.md` is the entry point; supporting files stay beside it. Categories organize browsing, while skill names remain unique across the repository. Add categories as the collection grows.
@@ -83,7 +85,7 @@ Agents editing this repository should follow [AGENTS.md](AGENTS.md).
 
 ## Acknowledgments
 
-The collection and folder organization are inspired by [Matt Pocock's skills](https://github.com/mattpocock/skills) and [Anthropic's skills](https://github.com/anthropics/skills).
+The collection and folder organization are inspired by [Matt Pocock's skills](https://github.com/mattpocock/skills) and [Anthropic's skills](https://github.com/anthropics/skills). `shuorenhua` adapts [mrgediao/shuorenhua](https://github.com/mrgediao/shuorenhua); keep upstream attribution when forking further.
 
 ## License
 
