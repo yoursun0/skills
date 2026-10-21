@@ -1,8 +1,10 @@
 # Agent Skills
 
-Reusable workflows for AI agents by [Helic Leung](https://github.com/yoursun0). Each skill includes an entry point, task-specific guidance, and any scripts or references needed to use it in another project.
+Six reusable workflows for AI agents by [Helic Leung](https://github.com/yoursun0), organized into Creative, Engineering, Sensor, and Text. Each skill bundles its instructions, references, and runtime scripts so it can be installed into another project.
 
 ## Skill catalog
+
+Choose Creative to produce visual media, Engineering to verify a deployment, Sensor to understand video, or Text to write and edit prose. Follow each skill's linked instructions for its full workflow and setup.
 
 ### Creative
 
@@ -46,13 +48,27 @@ bunx skills@latest add yoursun0/skills --skill watch
 
 Add `--global` for user-wide installation. For manual installation, copy the complete skill directory into your agent's skills directory, including its scripts, references, and assets.
 
-Read the installed `SKILL.md` for setup and usage. For example:
+From a local checkout, list the available skills or install one directly:
 
-```text
-Use watch to summarize this video and cite the key timestamps.
+```sh
+bunx skills@latest add . --list
+bunx skills@latest add . --skill watch
 ```
 
 Installation supplies workflow files. Configure tools and credentials separately; cloud analysis, transcription, and media generation may upload content and incur provider charges. The individual skills describe their data flows and setup choices.
+
+## Use a skill
+
+Ask your agent to use the installed skill by name and supply the source material or acceptance criteria it needs:
+
+| Task | Example request |
+| --- | --- |
+| Model a subject | Use blender-render to model this building from the attached reference photos and render ten angles. |
+| Produce a video | Use hyperframe-video to create a 30-second product explainer from this brief. |
+| Generate media | Use siliconflow-media to generate an illustration from this prompt. |
+| Verify a release | Use ship-then-uat to deploy this change and test these acceptance criteria against the deployed commit. |
+| Understand a video | Use watch to summarize this video and cite the key timestamps. |
+| Edit prose | Use my-writing to edit this Chinese draft for natural expression while preserving its meaning and author voice. |
 
 ## Layout
 
