@@ -12,6 +12,7 @@ Install the skills you need, adapt them to your projects, and contribute improve
 | --- | --- | --- |
 | [hyperframe-video](skills/creative/hyperframe-video/SKILL.md) | Producing or substantially revising a complete HyperFrames video, from reference study and storyboarding through rendering and delivery verification. | A working HyperFrames environment; supporting skills and fallback guidance are listed in the workflow. |
 | [siliconflow-media](skills/creative/siliconflow-media/SKILL.md) | Generating images, video clips, and speech through SiliconFlow with a bundled Python runner. | Python 3.11+, `uv`, and a SiliconFlow API key for live generation. Optional encrypted credential storage requires Windows PowerShell. |
+| [writing](skills/creative/writing/SKILL.md) | Writing 散文、小說、詩詞 and 週記 in Helic Leung's 凌晨 voice, with separate genre and era guidance. | Bundled style references; provide project-specific source material when continuing an existing work. |
 
 ## Installation
 
@@ -51,11 +52,14 @@ Read the skill before running it. Live media generation requires your own provid
         ├── hyperframe-video/
         │   ├── SKILL.md
         │   └── references/
-        └── siliconflow-media/
+        ├── siliconflow-media/
+        │   ├── SKILL.md
+        │   ├── agents/
+        │   ├── references/
+        │   └── scripts/
+        └── writing/
             ├── SKILL.md
-            ├── agents/
-            ├── references/
-            └── scripts/
+            └── references/
 ```
 
 Each skill lives in `skills/<category>/<skill-name>/`. `SKILL.md` is the entry point; supporting files stay beside it. Categories organize browsing, while skill names remain unique across the repository. Add categories as the collection grows.
