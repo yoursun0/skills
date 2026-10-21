@@ -1,3 +1,25 @@
-node_modules
-.claude
-.docs
+# Dependencies and caches
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+.uv-cache/
+
+# Local agent configuration and working notes
+.claude/
+.docs/
+
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+*.dpapi
+
+# Generated media and build output
+generated/
+renders/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
