@@ -28,3 +28,4 @@ This public repository publishes reusable agent skills. Optimize changes for som
 - For executable changes, run relevant offline checks and exercise changed behavior. Report live testing separately from dry-run evidence.
 - Keep the root MIT license applicable to original contributions. Preserve required third-party attribution and document any bundled material with separate terms.
 - Report the files changed, checks performed, and material limitations. Leave commits, pushes, and publication to the user's requested workflow.
+- always commit your changes after a complete round of actions.
