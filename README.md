@@ -1,6 +1,6 @@
 # Agent Skills
 
-Seven reusable workflows for AI agents by [Helic Leung](https://github.com/yoursun0), organized into Creative, Engineering, Sensor, and Text. Each skill bundles its instructions, references, and runtime scripts so it can be installed into another project.
+Eight reusable workflows for AI agents by [Helic Leung](https://github.com/yoursun0), organized into Creative, Engineering, Sensor, and Text. Each skill bundles its instructions, references, and runtime scripts so it can be installed into another project.
 
 ## Skill catalog
 
@@ -14,6 +14,7 @@ Choose Creative to produce visual media, Engineering to verify a deployment, Sen
 | [hyperframe-video](skills/creative/hyperframe-video/SKILL.md) | Produces complete HyperFrames videos through reference study, storyboarding, animation, rendering, and delivery review. | A working HyperFrames environment; the skill documents supporting workflows and fallbacks. |
 | [game-gui-aesthetics](skills/creative/game-gui-aesthetics/SKILL.md) | Designs and reviews game HUD/menu/shop/results chrome and mock-to-live visual handoffs for dark-rogue or card-game UIs. | None beyond an agent that can read `SKILL.md`; optional deepen links are listed in the skill. |
 | [siliconflow-media](skills/creative/siliconflow-media/SKILL.md) | Generates images, video clips, and speech through SiliconFlow. | Python 3.11+, uv, and a SiliconFlow API key. Optional encrypted credential storage uses Windows PowerShell. |
+| [ace-music](skills/creative/ace-music/SKILL.md) | Generates music / game BGM / instrumental loops through the free ACE Music hosted API. | An ACE Music API key from [acemusic.ai/playground/api-key](https://acemusic.ai/playground/api-key); set `ACE_MUSIC_API_KEY` (or `ACE_MUSIC_API_KEY_FILE`). Python 3 for the bundled script. |
 
 ### Engineering
 
@@ -68,6 +69,7 @@ Ask your agent to use the installed skill by name and supply the source material
 | Produce a video | Use hyperframe-video to create a 30-second product explainer from this brief. |
 | Design game GUI chrome | Use game-gui-aesthetics before drawing HUD plaques or handing mocks to an implementer. |
 | Generate media | Use siliconflow-media to generate an illustration from this prompt. |
+| Generate music / BGM | Use ace-music to generate a 30-second instrumental game BGM from this prompt. |
 | Verify a release | Use ship-then-uat to deploy this change and test these acceptance criteria against the deployed commit. |
 | Understand a video | Use watch to summarize this video and cite the key timestamps. |
 | Edit prose | Use my-writing to edit this Chinese draft for natural expression while preserving its meaning and author voice. |
