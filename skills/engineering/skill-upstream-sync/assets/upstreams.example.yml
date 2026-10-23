@@ -1,0 +1,52 @@
+# Example manifest for skill-upstream-sync.
+# Copy to ~/.config/agent-skills/upstreams.yml (or set AGENT_SKILLS_UPSTREAMS).
+# This file lists WHERE to fetch from — it does not embed third-party skill bodies.
+
+version: 1
+# dest:  # optional; empty → ~/.agents/skills or %USERPROFILE%\.agents\skills
+
+upstreams:
+  - id: matt-wait-what
+    repo: mattpocock/skills
+    path: skills/productivity/wait-what
+    install_as: wait-what
+    lane: tip
+    pin_sha: null
+
+  - id: matt-writing-for-agents
+    repo: mattpocock/skills
+    path: skills/productivity/writing-for-agents
+    install_as: writing-for-agents
+    lane: tip
+    pin_sha: null
+
+  - id: matt-domain-modeling
+    repo: mattpocock/skills
+    path: skills/engineering/domain-modeling
+    install_as: domain-modeling
+    lane: tip
+    pin_sha: null
+
+  - id: matt-to-questionnaire
+    repo: mattpocock/skills
+    path: skills/productivity/to-questionnaire
+    install_as: to-questionnaire
+    lane: tip
+    pin_sha: null
+
+  - id: matt-handoff
+    repo: mattpocock/skills
+    path: skills/productivity/handoff
+    install_as: handoff
+    lane: tip
+    pin_sha: null
+
+  # Adapted / locally rewritten skills must NOT auto-overwrite.
+  # Example: grilling on Grok was synced with an extra "yes = accept recommendation"
+  # line — keep lane pin and bump pin_sha only after deliberate adoption.
+  - id: matt-grilling
+    repo: mattpocock/skills
+    path: skills/productivity/grilling
+    install_as: grilling
+    lane: pin
+    pin_sha: "REPLACE_WITH_ADOPTED_SHA"  # full or 7+ chars of the SHA you last adopted

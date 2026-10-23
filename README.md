@@ -1,6 +1,6 @@
 # Agent Skills
 
-Nine reusable workflows for AI agents by [Helic Leung](https://github.com/yoursun0), organized into Creative, Engineering, Sensor, and Text. Each skill bundles its instructions, references, and runtime scripts so it can be installed into another project.
+Ten reusable workflows for AI agents by [Helic Leung](https://github.com/yoursun0), organized into Creative, Engineering, Sensor, and Text. Each skill bundles its instructions, references, and runtime scripts so it can be installed into another project.
 
 ## Skill catalog
 
@@ -22,6 +22,7 @@ Choose Creative to produce visual media, Engineering to verify a deployment, Sen
 | --- | --- | --- |
 | [ship-then-uat](skills/engineering/ship-then-uat/SKILL.md) | Ships a change and tests acceptance criteria against the live deployment of that commit. | A live URL and a way to verify the deployed commit; supports solo or split deploy/UAT ownership. |
 | [prove-with-evidence](skills/engineering/prove-with-evidence/SKILL.md) | Requires before/after screenshots, live URL, or CLI proof before claiming done or Ready for Review. | None beyond an agent that can capture evidence against a real build or URL. |
+| [skill-upstream-sync](skills/engineering/skill-upstream-sync/SKILL.md) | Weekly or on-demand sync of *unmodified* third-party skills from public GitHub into local `.agents/skills` (tip auto-replace / pin report-only). | Python 3.10+; optional `gh` or `GITHUB_TOKEN` for API rate limits. Does not republish upstream skill bodies into this repo. |
 
 ### Sensor
 
@@ -73,6 +74,7 @@ Ask your agent to use the installed skill by name and supply the source material
 | Generate music / BGM | Use ace-music to generate a 30-second instrumental game BGM from this prompt. |
 | Verify a release | Use ship-then-uat to deploy this change and test these acceptance criteria against the deployed commit. |
 | Prove a change | Use prove-with-evidence before marking a UI or behavior change done. |
+| Sync upstream skills | Use skill-upstream-sync with a tip/pin manifest to refresh unmodified Matt/poteto skills on this machine. |
 | Understand a video | Use watch to summarize this video and cite the key timestamps. |
 | Edit prose | Use my-writing to edit this Chinese draft for natural expression while preserving its meaning and author voice. |
 
@@ -81,12 +83,15 @@ Ask your agent to use the installed skill by name and supply the source material
 ```text
 skills/
 ├── creative/
+│   ├── ace-music/
 │   ├── blender-render/
 │   ├── game-gui-aesthetics/
 │   ├── hyperframe-video/
 │   └── siliconflow-media/
 ├── engineering/
-│   └── ship-then-uat/
+│   ├── prove-with-evidence/
+│   ├── ship-then-uat/
+│   └── skill-upstream-sync/
 ├── sensor/
 │   └── watch/
 └── text/
