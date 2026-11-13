@@ -1,0 +1,20 @@
+{
+  "skill": "create-home-repo",
+  "test_cases": [
+    {
+      "name": "basic_setup_request",
+      "input": "Set up a Home Repo for me so I can run agents across all my projects",
+      "assertions": ["starts inventory of repos", "asks decisions in rounds", "does not write until plan approved"]
+    },
+    {
+      "name": "multi_repo_context",
+      "input": "I have several repos and duplicated skills, create a home repo following Matt's pattern",
+      "assertions": ["inventories shared material", "buckets items as shared/duplicate/repo-specific", "proposes AGENTS.md with pointers"]
+    },
+    {
+      "name": "scale_case",
+      "input": "Set up home repo, I have over 30 repositories",
+      "assertions": ["recommends progressive disclosure / grouping pointers", "asks about grouping by area"]
+    }
+  ]
+}

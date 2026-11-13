@@ -1,0 +1,11 @@
+{
+  "skill": "create-home-repo",
+  "test_cases": [
+    {"input": "set up a home repo", "should_trigger": true},
+    {"input": "create home repo for my agents", "should_trigger": true},
+    {"input": "Matt's home repo pattern", "should_trigger": true},
+    {"input": "I want one place to run agents across all my repos", "should_trigger": true},
+    {"input": "fix this bug in the frontend", "should_trigger": false},
+    {"input": "write a unit test", "should_trigger": false}
+  ]
+}
